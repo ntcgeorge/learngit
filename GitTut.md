@@ -15,7 +15,7 @@ Staging Area(Index): We can add the CHANGE we made on working area to the stagin
 
 Repository(master): The place git truly store the versions of the code. Git will automatically generate a pointer HEAD pointing to the branch master once the repository is initialized. We can commit out alteration on the code to repository using command `git commit -m <comment>`.
 
-### 2. Init Add and Commit
+### 2. Init, Add and Commit
 
 Here are some commonly used and basic operation:
 
@@ -36,7 +36,7 @@ You can see that there is .git directory in our current file folder
 git add <file>
 ```
 
-To add everything at once:[](https://www.liaoxuefeng.com/files/attachments/919022363210080/l)
+To add everything at once:
 
 ```console
 $ git add -A
@@ -102,7 +102,7 @@ When there is conflict, we need to fix the conflict in the file and re-submit it
 
 ## GitHub
 
-### 1.Github -- Remote Repo
+### 1.Github -- Remote Repository
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png" alt="github icon" style="width:100px;"/>
 
@@ -122,7 +122,7 @@ Here I suggest use ssh protocol to link to Github.
 id_ed25519  id_ed25519.pub  known_hosts
 ```
 
-2. cd to .ssh filefolder mentioned above. Type command 
+2. cd to .ssh file folder mentioned above. Type command 
 
 ```console
 $ ssh-keygen -t rsa -C "youremail@example.com"
@@ -142,11 +142,11 @@ When you are prompted to type a passphrase, press Enter.
 > Enter same passphrase again: [Type passphrase again]
 ```
 
-3. After the key is generated, we need to add the public key to Github account. Which looks like this: 
+3. After the key is generated, we need to add the public key to Github account, which looks like this: 
 ![addsshkey](https://docs.github.com/assets/cb-24796/images/help/settings/ssh-key-paste.png)
 For more details, please refer to [How to add SSH key](https://docs.github.com/cn/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
 
-4. Once the key is added to the account. We can link the local repo to remote repo(github repo). cd to your local repository filefolder and use the command.
+4. Once the key is added to the account. We can link the local repo to remote repo(github repo). cd to your local repository file folder and use the command.
 
 ```console
 $ git remote add origin git@github.com:username/reponame.git
@@ -162,6 +162,64 @@ If you see the text below:
 ```console
 > Hi MDmoonheart! You've successfully authenticated, but GitHub does not provide shell access.
 ```
-you are ready to go.
+you are ready to go!
+
+### Appendix A: Advised Project Structure
+
+Since we share the same code base, a standard project structure is necessary for our members. I suggest we construct the project as below, and every time we just uplaod the python and Documents folder which contain scripts only and we store image data and checkpoint on local.
+
+a-python-project
+├── src
+│   ├── main
+│   │   ├── python
+│   │   └── resources
+│   └── test
+│       ├── python
+│       └── resources
+└── Documents
+
+### Appendix B: Branch Management
+
+We usally do not work directly on the main branch, a common work flow is we create a dev brach for the common development, once we finish the test unit and the version is stable, we then merge to the main branch, the main branch is only for the version distribution.
+
+When we interact with remote repository, we usually follow the steps below:
+
+1. We can first try `git push origin <branch-name>` to push the local commit.
+2. If fail, that usually is because the remote branch is later than the local one, we can try `git pull` to pull from the remote.
+3. If there is conflict, then we need to fix it and commit on local.
+4. If there is no conflict or the conflict is fixed then we can push the local commit to the remote repository.
+
+### Appendix C: Install Git
+In case you guys haven't installed Git, here is a brief introduction to the installation.
+
+#### 1. Linux
+Git needs other packages such as curl, zlib, openssl, expat, libiconv as denpendecies, we need to first install them.
+
+```console
+$ apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \
+  libz-dev libssl-dev
+
+$ apt-get install git
+
+$ git --version
+git version 1.8.1.2
+```
+
+#### 2. Windows OS
+For Windows OS, you can directly install it through the official install packages: [https://gitforwindows.org/](https://gitforwindows.org/)
+
+#### 3. Mac OS
+Directly install Git with homebrew : [http://brew.sh/](http://brew.sh/)
+Or you can find out git in Xcode: run Xcode and choose menue “Xcode”->“Preferences” -> "Downloads" -> "Command Line Tools"
+
+![](https://www.liaoxuefeng.com/files/attachments/919018691743136/0)
 
 
+
+
+
+## Reference
+
+1. [廖雪峰的官方网站-Git教程](https://www.liaoxuefeng.com/wiki/896043488029600)
+2. [菜鸟教程-Git教程](https://www.runoob.com/git/git-tutorial.html)
+3. [Git 官方文档](https://git-scm.com/doc)
