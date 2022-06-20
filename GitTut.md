@@ -4,7 +4,7 @@
 
 ### 1. Git Introduction
 
-Git is a version control system, it can track down the editting history of the source code and trace back to the previous version. Also it allows the developer add edit code in parallel.
+Git is a version control system, it can track down the editting history of the source code and trace back to the previous version. Also it allows the developer edit code in parallel.
 
 Following is the structure of a local Git System
 ![Stage Area and Repository](https://www.runoob.com/wp-content/uploads/2015/02/1352126739_7909.jpg)
