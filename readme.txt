@@ -6,3 +6,4 @@ Git is open-source dev management system.
 I like Git !
 I code in python.
 I use Vscode.
+I use sublimetext
