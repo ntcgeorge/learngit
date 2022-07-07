@@ -3,27 +3,27 @@
 
 - [Git and Github -- A Version Control System and Remote Repository](#git-and-github----a-version-control-system-and-remote-repository)
   - [1. <a name='Git'></a>Git](#1-git)
-    - [1.1. <a name='GitIntroduction'></a>Git Introduction](#11-1-git-introduction)
-    - [1.2. <a name='InitAddandCommit'></a>Init, Add and Commit](#12-2-init-add-and-commit)
-    - [1.3. <a name='BranchandMergeOperation'></a>Branch and Merge Operation](#13-3-branch-and-merge-operation)
-    - [1.4. <a name='GitLog'></a>Git Log](#14-4-git-log)
-    - [1.5. <a name='FixConflict'></a>Fix Conflict](#15-5-fix-conflict)
+    - [1.1. <a name='GitIntroduction'></a> Git Introduction](#11--git-introduction)
+    - [1.2. <a name='InitAddandCommit'></a> Init, Add and Commit](#12--init-add-and-commit)
+    - [1.3. <a name='BranchandMergeOperation'></a> Branch and Merge Operation](#13--branch-and-merge-operation)
+    - [1.4. <a name='GitLog'></a> Git Log](#14--git-log)
+    - [1.5. <a name='FixConflict'></a> Fix Conflict](#15--fix-conflict)
   - [2. <a name='GitHub'></a>GitHub](#2-github)
-    - [2.1. <a name='Github--RemoteRepository'></a>Github -- Remote Repository](#21-1github----remote-repository)
-    - [2.2. <a name='LinktoGithub'></a>Link to Github](#22-2-link-to-github)
+    - [2.1. <a name='Github--RemoteRepository'></a>Github -- Remote Repository](#21-github----remote-repository)
+    - [2.2. <a name='LinktoGithub'></a> Link to Github](#22--link-to-github)
   - [3. <a name='Appendix'></a>Appendix](#3-appendix)
     - [3.1. <a name='AppendixA:BranchManagement'></a>Appendix A: Branch Management](#31-appendix-a-branch-management)
     - [3.2. <a name='AppendixB:InstallGit'></a>Appendix B: Install Git](#32-appendix-b-install-git)
-      - [3.2.1. <a name='Linux'></a> Linux](#321-1-linux)
-      - [3.2.2. <a name='WindowsOS'></a>Windows OS](#322-2-windows-os)
-      - [3.2.3. <a name='MacOS'></a>Mac OS](#323-3-mac-os)
+      - [3.2.1. <a name='Linux'></a> Linux](#321--linux)
+      - [3.2.2. <a name='WindowsOS'></a> Windows OS](#322--windows-os)
+      - [3.2.3. <a name='MacOS'></a> Mac OS](#323--mac-os)
   - [4. <a name='Reference'></a>Reference](#4-reference)
 
 
 
 ##  1. <a name='Git'></a>Git
 
-###  1.1. <a name='GitIntroduction'></a>1. Git Introduction
+###  1.1. <a name='GitIntroduction'></a> Git Introduction
 
 Git is a version control system, it can track down the editting history of the source code and trace back to the previous version. Also it allows the developer edit code in parallel.
 
@@ -36,7 +36,7 @@ Staging Area(Index): We can add the CHANGE we made on working area to the stagin
 
 Repository(master): The place git truly store the versions of the code. Git will automatically generate a pointer HEAD pointing to the branch master once the repository is initialized. We can commit out alteration on the code to repository using command `git commit -m <comment>`.
 
-###  1.2. <a name='InitAddandCommit'></a>2. Init, Add and Commit
+###  1.2. <a name='InitAddandCommit'></a> Init, Add and Commit
 
 Here are some commonly used and basic operation:
 
@@ -69,7 +69,7 @@ $ git add -A
 $ git commit -m <comment>
 ```
 
-###  1.3. <a name='BranchandMergeOperation'></a>3. Branch and Merge Operation
+###  1.3. <a name='BranchandMergeOperation'></a> Branch and Merge Operation
 
 The magic of Git is its' branch management, git branch allows the developer add code to the same repository in parallel.
 
@@ -95,7 +95,7 @@ Once we think dev finish our work, we can merge dev to master branch, the easies
 
 Then we can switch back to the branch master and delete the branch dev, it looks like we just directly commit on the branch master.
 
-###  1.4. <a name='GitLog'></a>4. Git Log
+###  1.4. <a name='GitLog'></a> Git Log
 
 Git log is a utility tool to review and read a history of everything that happens to a repository. The command is
 `git log` or `git log --graph --pretty=oneline --abbrev-commit`, the latter will make your commit history looks like an commit chain.
@@ -114,7 +114,7 @@ Git log is a utility tool to review and read a history of everything that happen
 
 The unix number ahead of the comments is the unique version id of each commit. Version id is extremly useful when we want to reverse version.
 
-###  1.5. <a name='FixConflict'></a>5. Fix Conflict
+###  1.5. <a name='FixConflict'></a> Fix Conflict
 
 When the same file is changed on different dev and finally they are merged together, conflict appears. The situation is common when more than one person are working on the same project.
 
@@ -123,7 +123,7 @@ When there is conflict, we need to fix the conflict in the file and re-submit it
 
 ##  2. <a name='GitHub'></a>GitHub
 
-###  2.1. <a name='Github--RemoteRepository'></a>1.Github -- Remote Repository
+###  2.1. <a name='Github--RemoteRepository'></a>Github -- Remote Repository
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png" alt="github icon" style="width:100px;"/>
 
@@ -131,7 +131,7 @@ Git is convenient for team developing, usually a team establishes a central serv
 
 Noticeably, interacting with remote repo makes no difference from interacting with local branch.
 
-###  2.2. <a name='LinktoGithub'></a>2. Link to Github
+###  2.2. <a name='LinktoGithub'></a> Link to Github
 
 Here I suggest use ssh protocol to link to Github.
 
@@ -202,7 +202,7 @@ When we interact with remote repository, we usually follow the steps below:
 
 In case you guys haven't installed Git, here is a brief introduction to the installation.
 
-####  3.2.1. <a name='Linux'></a>1. Linux
+####  3.2.1. <a name='Linux'></a> Linux
 Git needs other packages such as curl, zlib, openssl, expat, libiconv as denpendecies, we need to first install them.
 
 ```console
@@ -215,10 +215,10 @@ $ git --version
 git version 1.8.1.2
 ```
 
-####  3.2.2. <a name='WindowsOS'></a>2. Windows OS
+####  3.2.2. <a name='WindowsOS'></a> Windows OS
 For Windows OS, you can directly install it through the official install packages: [https://gitforwindows.org/](https://gitforwindows.org/)
 
-####  3.2.3. <a name='MacOS'></a>3. Mac OS
+####  3.2.3. <a name='MacOS'></a> Mac OS
 Directly install Git with homebrew : [http://brew.sh/](http://brew.sh/)
 Or you can find out git in Xcode: run Xcode and choose menue “Xcode”->“Preferences” -> "Downloads" -> "Command Line Tools"
 
